@@ -31,6 +31,7 @@ app.use(cors({
   origin: [
     'http://localhost:5173',
     'https://atl-frontend-ashy.vercel.app',
+    'https://avanttechlab.vercel.app',
     process.env.FRONTEND_URL
   ].filter(Boolean),
   methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],

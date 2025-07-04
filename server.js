@@ -56,6 +56,7 @@ const app = express();
 const allowedOrigins = [
   'http://localhost:5173',  // Vite dev server
   'http://localhost:3000',  // Alternative local frontend
+  'https://avanttechlab.vercel.app', // New frontend URL
   process.env.FRONTEND_URL, // Production frontend URL (set this in Vercel)
 ];
 

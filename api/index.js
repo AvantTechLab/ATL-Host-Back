@@ -25,6 +25,7 @@ const allowedOrigins = [
   'http://localhost:5173',  // Vite dev server
   'http://localhost:3000',  // Alternative local frontend
   'https://atl-frontend-ashy.vercel.app', // Production frontend URL
+  'https://avanttechlab.vercel.app', // New frontend URL
   process.env.FRONTEND_URL, // Production frontend URL from env
 ];
 
