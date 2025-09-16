@@ -73,6 +73,25 @@ router.put('/:id', verifyToken, async (req, res) => {
   }
 });
 
+// Delete equipment
+router.delete('/:id', verifyToken, async (req, res) => {
+  try {
+    const equipment = await Equipment.findByIdAndDelete(req.params.id);
+    if (!equipment) {
+      return res.status(404).json({
+        ok: false,
+        error: 'Equipment not found'
+      });
+    }
+    res.json({ ok: true, message: 'Equipment deleted successfully' });
+  } catch (error) {
+    res.status(500).json({
+      ok: false,
+      error: 'Failed to delete equipment'
+    });
+  }
+});
+
 // Get equipment by IDs
 router.post('/byIds', verifyToken, async (req, res) => {
   try {
